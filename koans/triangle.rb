@@ -14,7 +14,17 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  sorted_arguments = [a,b,c].sort
+  raise TriangleError.new if (sorted_arguments[0] < 1)
+  raise TriangleError.new if (sorted_arguments[0] + sorted_arguments[1] <= sorted_arguments[2])
+  case [a,b,c].uniq.size
+  when 1
+    :equilateral
+  when 2
+    :isosceles
+  when 3
+    :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
