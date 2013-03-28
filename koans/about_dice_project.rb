@@ -10,11 +10,7 @@ class DiceSet
   end
 
   def roll times
-    @values = []
-    times.times do 
-      @values << (1..6).to_a.sample
-    end
-    
+    @values = (1..6).to_a.sample(times)
   end
 end
 
