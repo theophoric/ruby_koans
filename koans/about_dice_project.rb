@@ -12,6 +12,7 @@ class DiceSet
   def roll times
     @values = (1..6).to_a.sample(times)
   end
+  
 end
 
 class AboutDiceProject < EdgeCase::Koan
